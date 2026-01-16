@@ -1,0 +1,378 @@
+/* Manifesto Page Styles */
+:root {
+  --primary-dark: #06073d;
+  --accent-blue: #0e1075;
+  --text-light: white;
+  --gradient-hero: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent-blue) 100%);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================== HERO SECTION ==================== */
+.manifesto-hero {
+  background: var(--gradient-hero);
+  padding: 5rem 0 4rem;
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.manifesto-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.manifesto-badge {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  display: inline-block;
+  animation: fadeInDown 0.8s ease-out 0.2s both;
+}
+
+.manifesto-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.manifesto-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.8;
+  opacity: 0.95;
+  margin: 0;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== SECTION HEADERS ==================== */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==================== PILLARS SECTION ==================== */
+.manifesto-pillars {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.pillar-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  background: white;
+  height: 100%;
+  border-left: 4px solid var(--pillar-color, var(--accent-blue));
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pillar-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--pillar-color, var(--accent-blue)), rgba(14, 16, 117, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pillar-card:hover .pillar-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pillar-icon {
+  font-size: 2rem;
+  color: white;
+}
+
+.pillar-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.pillar-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pillar-point {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  transition: var(--transition);
+}
+
+.pillar-point:hover {
+  color: var(--accent-blue);
+  transform: translateX(5px);
+}
+
+.pillar-point i {
+  color: var(--pillar-color, var(--accent-blue));
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.pillar-point:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== COMMITMENTS SECTION ==================== */
+.manifesto-commitments {
+  padding: 4rem 0;
+  background: white;
+}
+
+.commitments-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.commitments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.commitment-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  font-size: 1.125rem;
+  color: #555;
+  border-bottom: 1px solid #e9ecef;
+  transition: var(--transition);
+}
+
+.commitment-item:last-child {
+  border-bottom: none;
+}
+
+.commitment-item:hover {
+  color: var(--accent-blue);
+  transform: translateX(10px);
+}
+
+.commitment-icon {
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+/* ==================== CTA SECTION ==================== */
+.manifesto-cta {
+  padding: 4rem 0;
+  background: var(--gradient-hero);
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.cta-text {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: 1.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.cta-buttons .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.3);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 992px) {
+  .pillar-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pillar-icon-wrapper {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .manifesto-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .manifesto-pillars,
+  .manifesto-commitments,
+  .manifesto-cta {
+    padding: 3rem 0;
+  }
+
+  .pillar-title {
+    font-size: 1.5rem;
+  }
+
+  .pillar-point {
+    font-size: 0.95rem;
+  }
+
+  .commitment-item {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .manifesto-title {
+    font-size: 2rem;
+  }
+
+  .manifesto-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .pillar-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pillar-icon {
+    font-size: 1.5rem;
+  }
+}
