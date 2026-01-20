@@ -25,7 +25,7 @@ const About = () => {
     {
       year: '2027 Vision',
       title: 'Finishing What We Started',
-      description: 'Now, with renewed energy and community support, Junior is ready to finish what we started—transforming Clay City into a beacon of security, welfare, and opportunity.',
+      description: 'Now, with renewed energy and community support, Junior is ready to finish what we started, transforming Clay City into a beacon of security, welfare, and opportunity.',
       icon: 'flag-fill'
     }
   ];
@@ -72,7 +72,7 @@ const About = () => {
                   his ability to lead and deliver on promises.
                 </p>
                 <p className="story-text">
-                  Now, with renewed determination and community support, Junior is ready to finish what we started—bringing 
+                  Now, with renewed determination and community support, Junior is ready to finish what we started, bringing 
                   transformative change to Clay City through enhanced security, improved welfare, and empowered youth.
                 </p>
               </div>

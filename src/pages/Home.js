@@ -88,7 +88,7 @@ const Home = () => {
             <Col lg={6}>
               <div className="hero-content">
                 <div className="hero-badge mb-4">
-                  <Badge bg="light" text="dark" className="px-4 py-2">2027 MCA </Badge>
+                  <Badge bg="light" text="dark" className="px-4 py-2">Kabeba - 2027 MCA </Badge>
                 </div>
                 <div className="typewriter-text typing">
                   {displayText}
@@ -140,7 +140,7 @@ const Home = () => {
       <section className="journey-section">
         <Container>
           <div className="section-header">
-            <h2 className="section-title">Junior's Journey</h2>
+            <h2 className="section-title">Kabebas's Journey</h2>
             <p className="section-subtitle">Rooted in Clay City, Committed to Progress</p>
           </div>
           <Row className="g-4 justify-content-center">
@@ -237,7 +237,7 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* News Teaser: Engagement Hook */}
+      {/* News Teaser: Engagement Hook 
       <section className="news-section">
         <Container>
           <div className="section-header">

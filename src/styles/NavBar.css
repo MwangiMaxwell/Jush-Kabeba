@@ -33,7 +33,7 @@
 }
 
 .navbar-brand i {
-  color: #FFD700;
+  color: hsl(12, 100%, 50%);
 }
 
 .custom-navbar .navbar-nav .nav-link {

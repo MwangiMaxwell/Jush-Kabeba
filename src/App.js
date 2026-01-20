@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Manifesto from './pages/Manifesto';
-import News from './pages/News';
 import Volunteer from './pages/Volunteer';
 import VoterReg from './pages/VoterReg';
 import Contact from './pages/Contact';
@@ -19,7 +18,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/manifesto" element={<Manifesto />} />
-          <Route path="/news" element={<News />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/voter" element={<VoterReg />} />
           <Route path="/contact" element={<Contact />} />

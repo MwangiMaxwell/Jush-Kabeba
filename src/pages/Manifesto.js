@@ -21,11 +21,9 @@ const Manifesto = () => {
       title: 'Family Welfare',
       color: '#E91E63',
       points: [
-        'Affordable housing initiatives',
         'Healthcare access programs',
         'Family support services',
         'Elderly care programs',
-        'Childcare support for working parents'
       ]
     },
     {
@@ -35,7 +33,6 @@ const Manifesto = () => {
       points: [
         'Skills training and workshops',
         'Job placement and career guidance',
-        'Startup grants and mentorship',
         'Sports and recreation facilities',
         'Education support programs'
       ]
@@ -74,7 +71,7 @@ const Manifesto = () => {
             <h1 className="manifesto-title">Manifesto 2027</h1>
             <p className="manifesto-subtitle">
               A comprehensive plan to transform Clay City Ward through security, welfare, youth empowerment, and economic growth. 
-              These are not just promises—they are commitments backed by action.
+              These are not just promises, they are commitments backed by action.
             </p>
           </div>
         </Container>

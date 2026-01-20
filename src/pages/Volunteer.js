@@ -128,7 +128,8 @@ const Volunteer = () => {
               </Card>
             </Col>
 
-            {/* Right Column - Registration Form */}
+            {/* Right Column - Registration Form (Commented Out) */}
+            {/*
             <Col lg={7}>
               <Card className="registration-card">
                 <Card.Body className="p-4">
@@ -263,6 +264,7 @@ const Volunteer = () => {
                 </Card.Body>
               </Card>
             </Col>
+            */}
           </Row>
         </Container>
       </section>

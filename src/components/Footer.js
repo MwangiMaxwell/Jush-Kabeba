@@ -10,7 +10,6 @@ const Footer = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/manifesto', label: 'Manifesto' },
-    { path: '/news', label: 'News' },
   ];
 
   const getInvolved = [

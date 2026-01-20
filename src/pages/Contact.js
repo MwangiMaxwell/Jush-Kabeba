@@ -1,26 +1,40 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Form, Button, Alert, Badge } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
+
+// Contact form configuration
+const CONTACT_EMAIL = 'info@kabebajush.co.ke';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-  const onSubmit = async (data) => {
-    setIsSubmitting(true);
-    try {
-      await emailjs.send('service_6y3m5q8', 'template_myaio5m', data, 'Lt69avNhZ9Njax7lp');
-      setSubmitted(true);
-      reset();
-    } catch (error) {
-      console.error('EmailJS error:', error);
-      alert('Error sending message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
+  const onSubmit = (data) => {
+    // Create email content
+    const subject = `Contact Form Message from ${data.name}`;
+    const body = `Name: ${data.name}
+Email: ${data.email}
+
+Message:
+${data.message}
+
+---
+This message was sent from the Kabeba Campaign website contact form.`;
+
+    // Encode for URL
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+
+    // Create mailto link
+    const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${encodedSubject}&body=${encodedBody}`;
+
+    // Open email client
+    window.open(mailtoLink, '_blank');
+
+    // Show success message and reset form
+    setSubmitted(true);
+    reset();
   };
 
   const contactInfo = [
@@ -110,7 +124,7 @@ const Contact = () => {
                       Send Us a Message
                     </h3>
                     <p className="form-subtitle">
-                      Fill out the form below and we'll get back to you as soon as possible.
+                      Fill out the form below and your email client will open with a pre-filled message.
                     </p>
                   </div>
 
@@ -178,24 +192,14 @@ const Contact = () => {
                     </Form.Group>
 
                     <Button
-                      type="submit"
-                      variant="primary"
-                      size="lg"
-                      className="submit-btn w-100"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <i className="bi bi-send-fill me-2"></i>
-                          Send Message
-                        </>
-                      )}
-                    </Button>
+                    type="submit"
+                    variant="primary"
+                    size="lg"
+                    className="submit-btn w-100"
+                  >
+                    <i className="bi bi-envelope me-2"></i>
+                    Send Email 
+                  </Button>
                   </Form>
 
                   {submitted && (
@@ -203,9 +207,9 @@ const Contact = () => {
                       <div className="d-flex align-items-start">
                         <i className="bi bi-check-circle-fill fs-3 me-3 text-success"></i>
                         <div>
-                          <h5 className="alert-heading mb-2">Message Sent Successfully!</h5>
+                          <h5 className="alert-heading mb-2">Email Client Opened!</h5>
                           <p className="mb-0">
-                            Thank you for reaching out. We've received your message and will get back to you soon.
+                            Your email client has opened with a pre-filled message. Please click "Send" in your email client to complete the message.
                           </p>
                         </div>
                       </div>

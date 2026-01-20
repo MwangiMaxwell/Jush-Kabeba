@@ -317,8 +317,9 @@
 
 .timeline-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.05);
   transition: var(--transition);
 }
 
@@ -677,6 +678,10 @@
 
   .timeline-content {
     padding: 1rem;
+  }
+
+  .timeline-image {
+    height: 200px;
   }
 
   .cta-buttons {
