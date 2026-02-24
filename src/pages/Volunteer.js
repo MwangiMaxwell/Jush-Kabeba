@@ -52,7 +52,7 @@ const Volunteer = () => {
             </Badge>
             <h1 className="volunteer-title">Become a Volunteer</h1>
             <p className="volunteer-subtitle">
-              Join Junior Kabeba's campaign to transform Clay City. Your time, energy, and passion can help build a stronger, safer, and more prosperous community for everyone.
+              Join  Kabeba's campaign to transform Clay City. Your time, energy, and passion can help build a stronger, safer, and more prosperous community for everyone.
             </p>
           </div>
         </Container>
@@ -254,7 +254,7 @@ const Volunteer = () => {
                         <div>
                           <h5 className="alert-heading mb-2">Karibu Sana! Welcome Aboard</h5>
                           <p className="mb-0">
-                            Thank you for signing up to join Junior Kabeba in this journey to transform Clay City. 
+                            Thank you for signing up to join kabeba's Kabeba in this journey to transform Clay City. 
                             Check your email for confirmation and join our WhatsApp group for your first message!
                           </p>
                         </div>

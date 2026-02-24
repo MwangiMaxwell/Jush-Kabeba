@@ -8,6 +8,8 @@ import Manifesto from './pages/Manifesto';
 import Volunteer from './pages/Volunteer';
 import VoterReg from './pages/VoterReg';
 import Contact from './pages/Contact';
+import Donate from './pages/Donate';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/donate" element={<Donate />} />
           <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/voter" element={<VoterReg />} />

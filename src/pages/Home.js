@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button, Card, Carousel, Badge } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
   const slogans = [
     "Let's Finish What We Started",
     'Build a Stronger Clay City—Together',
-    'Junior Kabeba for MCA 2027'
+    ' Kabeba for MCA 2027'
   ];
 
 
@@ -45,10 +46,10 @@ const Home = () => {
   }, [currentSlogan, displayText, isDeleting, typingSpeed, slogans]);
 
   const testimonials = [
-    { text: "Junior Kabeba is the visionary leader Clay City needs. His commitment to youth empowerment changed my life!", name: "Aisha M., Youth Leader", rating: 5 },
-    { text: "From safer streets to family welfare—Junior's plans are real and actionable. Proud to support!", name: "David K., Resident", rating: 5 },
+    { text: " Kabeba is the visionary leader Clay City needs. His commitment to youth empowerment changed my life!", name: "Aisha M., Youth Leader", rating: 5 },
+    { text: "From safer streets to family welfare, Kabeba's plans are real and actionable. Proud to support!", name: "David K., Resident", rating: 5 },
     { text: "In the last election, he fought hard. Now, let's finish what we started together!", name: "Fatuma N., Community Elder", rating: 5 },
-    { text: "Empowering women through skills training—Junior gets it. Clay City will thrive!", name: "Sarah W., Women's Group", rating: 4 },
+    { text: "Empowering women through skills training, Kabeba gets it. Clay City will thrive!", name: "Sarah W., Women's Group", rating: 4 },
   ];
 
   const stats = [
@@ -65,7 +66,7 @@ const Home = () => {
   ];
 
   const newsItems = [
-    { title: 'Town Hall Recap: Security Wins', excerpt: 'Junior outlines plan for 24/7 patrols—community cheers!', img: '/images/news1-placeholder.jpg', date: 'Jan 15, 2024' },
+    { title: 'Town Hall Recap: Security Wins', excerpt: 'Kabeba outlines plan for 24/7 patrols—community cheers!', img: '/images/news1-placeholder.jpg', date: 'Jan 15, 2024' },
     { title: 'Youth Forum Success', excerpt: 'Over 200 attended; skills bootcamp announced for Feb.', img: '/images/news2-placeholder.jpg', date: 'Jan 10, 2024' },
     { title: 'Welfare Update', excerpt: 'New family aid program launches—apply now!', img: '/images/news3-placeholder.jpg', date: 'Jan 5, 2024' },
   ];
@@ -80,7 +81,7 @@ const Home = () => {
               <div className="hero-image-wrapper">
                 <img 
                   src="/images/junior-hero.jpg" 
-                  alt="Junior Kabeba" 
+                  alt=" Kabeba" 
                   className="hero-image"
                 />
               </div>
@@ -88,7 +89,7 @@ const Home = () => {
             <Col lg={6}>
               <div className="hero-content">
                 <div className="hero-badge mb-4">
-                  <Badge bg="light" text="dark" className="px-4 py-2">Kabeba - 2027 MCA </Badge>
+                  <Badge bg="light" text="dark" className="px-4 py-2">Kabeba MCA 2027 </Badge>
                 </div>
                 <div className="typewriter-text typing">
                   {displayText}
@@ -101,9 +102,9 @@ const Home = () => {
                   <Button variant="light" size="lg" className="hero-btn-primary me-3" href="/volunteer">
                     Join the Movement
                   </Button>
-                  <Button variant="outline-light" size="lg" className="hero-btn-secondary" href="/about">
-                    Learn More
-                  </Button>
+                  <Link to="/coming-soon" className="btn btn-outline-light btn-lg hero-btn-secondary">
+                    Donate Now
+                  </Link>
                 </div>
               </div>
             </Col>
@@ -149,18 +150,18 @@ const Home = () => {
                 <div className="timeline-item timeline-item-left">
                   <div className="timeline-content">
                     <div className="timeline-image-wrapper">
-                     <img src="/images/junior-hero.jpg" alt="Junior Kabeba campaigning" className="timeline-image" /> 
+                     <img src="/images/junior-hero.jpg" alt=" Kabeba campaigning" className="timeline-image" /> 
                     </div>
                     <div className="timeline-text">
                       <h4 className="timeline-title">Born & Raised in Kasarani</h4>
-                      <p className="timeline-description">A lifelong resident, Junior knows our streets, struggles, and dreams—from youth hustles to family needs.</p>
+                      <p className="timeline-description">A lifelong resident, kabeba knows our streets, struggles, and dreams, from youth hustles to family needs.</p>
                     </div>
                   </div>
                 </div>
                 <div className="timeline-item timeline-item-right">
                   <div className="timeline-content">
                     <div className="timeline-image-wrapper">
-                      <img src="/images/kabeba-extra.jpg" alt="Junior Kabeba with community" className="timeline-image" />
+                      <img src="/images/kabeba-extra.jpg" alt=" Kabeba with community" className="timeline-image" />
                     </div>
                     <div className="timeline-text">
                       <h4 className="timeline-title">Last Election: 2nd Place Warrior</h4>
@@ -273,9 +274,9 @@ const Home = () => {
             <h2 className="cta-title">Ready to Transform Clay City?</h2>
             <p className="cta-subtitle">Your support powers our vision. Donate via M-Pesa or join today.</p>
             <div className="cta-buttons">
-              <Button variant="light" size="lg" className="cta-btn-primary me-3" href="https://kabebajush.co.ke/donate">
+              <Link to="/coming-soon" className="btn btn-light btn-lg cta-btn-primary me-3">
                 <i className="bi bi-heart-fill me-2"></i>Donate Now
-              </Button>
+              </Link>
               <Button variant="outline-light" size="lg" className="cta-btn-secondary" href="/contact">
                 <i className="bi bi-person-plus me-2"></i>Get Involved
               </Button>

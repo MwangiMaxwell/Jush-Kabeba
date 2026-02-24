@@ -15,7 +15,6 @@ const NavBar = () => {
     <Navbar expand="lg" fixed="top" className="custom-navbar" expanded={expanded} onToggle={setExpanded}>
       <Container>
         <Navbar.Brand as={Link} to="/" className="navbar-brand" onClick={handleNavLinkClick}>
-          <i className="bi bi-flag-fill me-2"></i>
           Kabeba for MCA
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,7 +29,9 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/manifesto" className={location.pathname === '/manifesto' ? 'active' : ''} onClick={handleNavLinkClick}>
               <i className="bi bi-file-text-fill me-1"></i>Manifesto
             </Nav.Link>
-           
+            <Nav.Link as={Link} to="/donate" className="donate-nav" onClick={handleNavLinkClick}>
+              <i className="bi bi-heart-fill me-1"></i>Donate
+            </Nav.Link>
             <Nav.Link as={Link} to="/volunteer" className={location.pathname === '/volunteer' ? 'active' : ''} onClick={handleNavLinkClick}>
               <i className="bi bi-people-fill me-1"></i>Volunteer
             </Nav.Link>

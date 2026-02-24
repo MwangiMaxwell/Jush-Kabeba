@@ -1,0 +1,31 @@
+# M-Pesa Daraja API Configuration
+# Get these from https://developer.safaricom.co.ke
+
+# Environment (sandbox or production)
+MPESA_ENV=sandbox
+
+# API Credentials
+MPESA_CONSUMER_KEY=your_consumer_key_here
+MPESA_CONSUMER_SECRET=your_consumer_secret_here
+
+# Business Details
+MPESA_SHORTCODE=your_business_shortcode_here
+MPESA_PASSKEY=your_passkey_here
+
+# Callback URL (must be HTTPS in production)
+MPESA_CALLBACK_URL=https://yourdomain.com/api/mpesa/callback
+
+# Server Configuration
+PORT=3001
+
+# Database Configuration (if using database)
+# DATABASE_URL=your_database_url_here
+
+# Email Configuration (for confirmations)
+# EMAIL_SERVICE=your_email_service
+# EMAIL_USER=your_email@example.com
+# EMAIL_PASS=your_email_password
+
+# SMS Configuration (Africa's Talking)
+# AT_USERNAME=your_at_username
+# AT_API_KEY=your_at_api_key

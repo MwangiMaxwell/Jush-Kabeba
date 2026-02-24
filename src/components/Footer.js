@@ -22,27 +22,18 @@ const Footer = () => {
     <footer className="custom-footer">
       <Container>
         <Row className="g-4">
-          <Col md={4}>
+          <Col md={3}>
             <div className="footer-section">
               <h5 className="footer-title">
-                <i className="bi bi-flag-fill me-2"></i>
-                Junior Kabeba
+                 Kabeba (Jush)
               </h5>
               <p className="footer-text">
-                Transforming Clay City Ward through security, welfare, youth empowerment, and economic growth. 
+                Transforming Clay City Ward through security, welfare, youth empowerment, and economic growth.
                 Join us in building a stronger community together.
               </p>
-              <div className="social-links">
-                <a href="https://chat.whatsapp.com/KfpZy480pQ13LysidCKuBp" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <i className="bi bi-whatsapp"></i>
-                </a>
-                <a href="https://kabebajush.co.ke/donate" target="_blank" rel="noopener noreferrer" className="social-link">
-                  <i className="bi bi-heart-fill"></i>
-                </a>
-              </div>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={3}>
             <div className="footer-section">
               <h5 className="footer-title">Quick Links</h5>
               <ul className="footer-links">
@@ -57,7 +48,7 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={3}>
             <div className="footer-section">
               <h5 className="footer-title">Get Involved</h5>
               <ul className="footer-links">
@@ -71,9 +62,37 @@ const Footer = () => {
                 ))}
               </ul>
               <div className="donate-section mt-3">
-                <a href="https://kabebajush.co.ke/donate" className="donate-btn" target="_blank" rel="noopener noreferrer">
+                <Link to="/coming-soon" className="donate-btn">
                   <i className="bi bi-heart-fill me-2"></i>
                   Donate via M-Pesa
+                </Link>
+              </div>
+            </div>
+          </Col>
+          <Col md={3}>
+            <div className="footer-section">
+              <h5 className="footer-title">Follow Us</h5>
+              <div className="social-links-vertical">
+                <a href="https://x.com/jeremiahkabeba?s=21" target="_blank" rel="noopener noreferrer" className="social-link-simple">
+                  <i className="bi bi-twitter"></i>
+                  <span>X (Twitter)</span>
+                </a>
+                <a href="https://whatsapp.com/channel/0029Va8We4EHrDZjn7ZqFC1T" target="_blank" rel="noopener noreferrer" className="social-link-simple">
+                  <i className="bi bi-whatsapp"></i>
+                  <span>WhatsApp</span>
+                </a>
+                <a href="https://www.instagram.com/kabebamweu?igsh=bnQ0NWFoeXBuNWN3" target="_blank" rel="noopener noreferrer" className="social-link-simple">
+                  <i className="bi bi-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/Kabebamweu/
+" target="_blank" rel="noopener noreferrer" className="social-link-simple">
+                  <i className="bi bi-facebook"></i>
+                  <span>Facebook</span>
+                </a>
+                <a href="https://www.threads.com/@kabebamweu?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" className="social-link-simple">
+                  <i className="bi bi-threads"></i>
+                  <span>Threads</span>
                 </a>
               </div>
             </div>
@@ -84,7 +103,7 @@ const Footer = () => {
           <Col>
             <div className="footer-bottom">
               <p className="footer-copyright">
-                © {currentYear} Junior Kabeba for MCA Clay City Ward. All rights reserved.
+                © {currentYear}  Kabeba for MCA Clay City Ward. All rights reserved.
               </p>
               <p className="footer-powered">
                 Powered by <a href="#" className="footer-link"> Kaizen solutions</a>

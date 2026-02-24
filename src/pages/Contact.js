@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Form, Button, Alert, Badge } from 'react-boo
 import { useForm } from 'react-hook-form';
 import '../styles/Contact.css';
 
-// Contact form configuration
+
 const CONTACT_EMAIL = 'info@kabebajush.co.ke';
 
 const Contact = () => {
@@ -11,7 +11,7 @@ const Contact = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
-    // Create email content
+
     const subject = `Contact Form Message from ${data.name}`;
     const body = `Name: ${data.name}
 Email: ${data.email}
@@ -41,8 +41,8 @@ This message was sent from the Kabeba Campaign website contact form.`;
     {
       icon: 'telephone-fill',
       title: 'Phone',
-      content: '+254 798 319 842',
-      link: 'tel:+254798319842'
+      content: '+254 733 572 577',
+      link: 'tel:+254733572577'
     },
     {
       icon: 'envelope-fill',

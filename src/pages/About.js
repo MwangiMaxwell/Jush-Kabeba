@@ -7,26 +7,26 @@ const About = () => {
     {
       year: 'Born & Raised',
       title: 'Rooted in Kasarani',
-      description: 'A lifelong resident of Clay City Ward, Junior grew up understanding the daily challenges and dreams of our community.',
+      description: 'A lifelong resident of Clay City Ward, kabeba grew up understanding the daily challenges and dreams of our community.',
       icon: 'house-heart-fill'
     },
     {
       year: 'Community Service',
       title: 'Dedicated to Service',
-      description: 'Throughout his career, Junior has been committed to community service, working tirelessly to improve the lives of Clay City residents.',
+      description: 'Throughout his career, Kabeba has been committed to community service, working tirelessly to improve the lives of Clay City residents.',
       icon: 'heart-fill'
     },
     {
       year: 'Last Election',
       title: '2nd Place - 10,000+ Votes',
-      description: 'In the previous election, Junior secured over 10,000 votes, finishing a close second and proving the trust of the community.',
+      description: 'In the previous election, Kabeba secured over 10,000 votes, finishing a close second and proving the trust of the community.',
       icon: 'trophy-fill'
     },
     {
       year: '2027 Vision',
       title: 'Finishing What We Started',
-      description: 'Now, with renewed energy and community support, Junior is ready to finish what we started, transforming Clay City into a beacon of security, welfare, and opportunity.',
-      icon: 'flag-fill'
+      description: 'Now, with renewed energy and community support, Kabeba is ready to finish what we started, transforming Clay City into a beacon of security, welfare, and opportunity.',
+      icon: 'eye-fill'
     }
   ];
 
@@ -46,7 +46,7 @@ const About = () => {
             <Badge bg="light" text="dark" className="about-badge mb-3">
               <i className="bi bi-person-badge-fill me-2"></i>Meet the Leader
             </Badge>
-            <h1 className="about-title">About Junior Kabeba</h1>
+            <h1 className="about-title">About  Kabeba Mweu (Jush) </h1>
             <p className="about-subtitle">
               A proven leader with deep roots in Clay City Ward, dedicated to finishing what we started and transforming our community for the better.
             </p>
@@ -62,17 +62,17 @@ const About = () => {
               <div className="story-content">
                 <h2 className="section-title">A Leader Rooted in Community</h2>
                 <p className="story-text">
-                  Junior Kabeba is a lifelong resident of Clay City Ward, Kasarani. Born and raised in this community, 
+                   Kabeba is a lifelong resident of Clay City Ward, Kasarani. Born and raised in this community, 
                   he has witnessed firsthand the challenges and opportunities that define our area. His deep understanding 
                   of local needs comes from years of living, working, and serving within these neighborhoods.
                 </p>
                 <p className="story-text">
-                  In the last election, Junior demonstrated his commitment and vision by securing over 10,000 votes, 
+                  In the last election, Kabeba demonstrated his commitment and vision by securing over 10,000 votes, 
                   finishing a close second. This strong showing proved the trust and confidence that residents have in 
                   his ability to lead and deliver on promises.
                 </p>
                 <p className="story-text">
-                  Now, with renewed determination and community support, Junior is ready to finish what we started, bringing 
+                  Now, with renewed determination and community support, Kabeba is ready to finish what we started, bringing 
                   transformative change to Clay City through enhanced security, improved welfare, and empowered youth.
                 </p>
               </div>
@@ -81,7 +81,7 @@ const About = () => {
               <div className="story-image-wrapper">
                 <img 
                   src="/images/junior-hero.jpg" 
-                  alt="Junior Kabeba" 
+                  alt=" Kabeba" 
                   className="story-image"
                 />
               </div>
