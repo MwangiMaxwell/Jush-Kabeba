@@ -7,7 +7,7 @@ const Home = () => {
   const [currentSlogan, setCurrentSlogan] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(150); // ms per char
+  const [typingSpeed, setTypingSpeed] = useState(150); 
 
   const slogans = [
     "Let's Finish What We Started",
@@ -16,7 +16,7 @@ const Home = () => {
   ];
 
 
-  // Simple Typewriter Effect
+  
   useEffect(() => {
     const handleType = () => {
       const current = slogans[currentSlogan];
@@ -29,16 +29,16 @@ const Home = () => {
 
     let timer;
     if (!isDeleting && displayText === slogans[currentSlogan]) {
-      // Pause at end, then delete
+      
       timer = setTimeout(() => {
         setIsDeleting(true);
       }, 2000);
     } else if (isDeleting && displayText === '') {
-      // Move to next slogan
+     
       setIsDeleting(false);
       setCurrentSlogan((prev) => (prev + 1) % slogans.length);
     } else {
-      // Type or delete
+      
       timer = setTimeout(handleType, typingSpeed);
     }
 

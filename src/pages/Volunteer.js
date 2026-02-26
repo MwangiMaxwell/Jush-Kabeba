@@ -15,7 +15,7 @@ const Volunteer = () => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-    // Add WhatsApp group info to data for EmailJS
+   
     data.whatsapp_group = 'https://chat.whatsapp.com/KfpZy480pQ13LysidCKuBp';
     
     try {
@@ -24,7 +24,7 @@ const Volunteer = () => {
       reset();
     } catch (error) {
       console.error('EmailJS error:', error);
-      // Still show success for better UX
+      
       setSubmitted(true);
       reset();
     } finally {

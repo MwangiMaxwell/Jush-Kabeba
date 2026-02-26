@@ -17,14 +17,9 @@ const Donate = () => {
 
   const donationAmounts = [50, 100, 500, 1000, 2000, 5000, 10000];
 
-  // ────────────────────────────────────────────────
-  //   IMPORTANT: Replace this with your real PayPal link
-  // ────────────────────────────────────────────────
+  
   const PAYPAL_LINK = "https://www.paypal.com/qrcodes/p2pqrc/5TZF93XGGDLUG";
-  // Examples:
-  // https://paypal.me/YourUsername
-  // https://www.paypal.com/donate?hosted_button_id=ABC123XYZ789
-  // https://paypal.me/YourUsername/100   ← amount can be pre-filled
+  
 
   const finalAmount = customAmount ? Number(customAmount) : selectedAmount;
 
@@ -44,13 +39,13 @@ const Donate = () => {
   };
 
   const handleMpesaPayment = async () => {
-    // Basic amount validation
+
     if (finalAmount < 10) {
       alert('Minimum donation is KSh 10');
       return;
     }
 
-    // Phone validation & normalization
+    
     const phoneRegex = /^(?:0|\+254|254)?[17]\d{8}$/;
     let phone = donorInfo.phone.trim();
 
@@ -59,7 +54,7 @@ const Donate = () => {
       return;
     }
 
-    // Normalize phone to international format (2547xxxxxxxx)
+   
     if (phone.startsWith('0')) {
       phone = '254' + phone.slice(1);
     } else if (phone.startsWith('+')) {
@@ -90,7 +85,7 @@ const Donate = () => {
           'Check your phone for the M-Pesa prompt.\n' +
           'Enter your PIN to complete the donation.'
         );
-        // You can later add polling here using data.checkoutRequestId
+        
       } else {
         alert(`Payment initiation failed: ${data.error || data.message || 'Unknown error'}`);
       }
@@ -106,7 +101,7 @@ const Donate = () => {
     if (activeMethod === 'mpesa') {
       handleMpesaPayment();
     } else {
-      // Placeholder for other methods (including PayPal fallback)
+      
       setIsProcessing(true);
       setTimeout(() => {
         alert(

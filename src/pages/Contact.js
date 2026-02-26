@@ -22,17 +22,17 @@ ${data.message}
 ---
 This message was sent from the Kabeba Campaign website contact form.`;
 
-    // Encode for URL
+    
     const encodedSubject = encodeURIComponent(subject);
     const encodedBody = encodeURIComponent(body);
 
-    // Create mailto link
+    
     const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${encodedSubject}&body=${encodedBody}`;
 
-    // Open email client
+    
     window.open(mailtoLink, '_blank');
 
-    // Show success message and reset form
+   
     setSubmitted(true);
     reset();
   };
